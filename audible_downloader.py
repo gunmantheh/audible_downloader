@@ -34,7 +34,7 @@ def downloadFile(downloadURL):
 		f.close()
 
 	file_size = int(meta["Content-Length"])
-	print("Filesize: {0} MB".format(file_size / 1024**2))
+	print("Filesize: {0:.2f} MB".format(file_size / 1024**2))
 
 def main():
 	url = ""
