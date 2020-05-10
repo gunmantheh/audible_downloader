@@ -17,6 +17,9 @@ def getFile(url):
 	    f = f + buffer.decode('utf-8')
 	return f
 
+def cleanUrl(url):
+	return url.replace("%20", "")
+
 def downloadFile(downloadURL):
 	file = getFile(downloadURL)
 	print("\n")
@@ -45,7 +48,7 @@ def main():
 		print ("no url given")
 		return 1
 
-	downloadFile(url)
+	downloadFile(cleanUrl(url))
 
 	return 0
 
